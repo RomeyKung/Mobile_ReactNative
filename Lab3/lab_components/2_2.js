@@ -2,12 +2,12 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
 // Import images
-const IT_Logo = require("./static/IT_Logo.png");
+const IT_Logo = require("../static/IT_Logo.png");
 const images = [
-  { src: require("./static/1.jpg"), name: "Information Technology" },
-  { src: require("./static/2.jpg"), name: "Software Development" },
-  { src: require("./static/3.jpg"), name: "Data Science" },
-  { src: require("./static/4.jpg"), name: "Web Development" },
+  { src: require("../static/1.jpg"), name: "Information Technology" },
+  { src: require("../static/2.jpg"), name: "Software Development" },
+  { src: require("../static/3.jpg"), name: "Data Science" },
+  { src: require("../static/4.jpg"), name: "Web Development" },
 ];
 
 export default function App() {

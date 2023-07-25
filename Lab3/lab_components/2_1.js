@@ -19,7 +19,7 @@ const App = () => {
         <Image
           resizeMode="contain"
           style={styles.imgs}
-          source={require("./static/IT_Logo.png")}
+          source={require("../static/IT_Logo.png")}
         ></Image>
 
         <Text>คณะเทคโนโลยีสารสนเทศ</Text>
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     rowGap: 20,
     margin: 20,
   },
-  
+
 });
 
 export default App;
