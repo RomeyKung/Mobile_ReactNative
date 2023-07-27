@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from "react-native";
 
 // Import images
 const IT_Logo = require("../static/IT_Logo.png");
@@ -18,14 +18,18 @@ export default function App() {
         <Text style={{ fontSize: 40 }}>Programs</Text>
       </View>
       <View style={styles.container}>
-        {images.map((item, index) => (
-          <TouchableOpacity>
-            <View key={index}>
-              <Image resizeMode="contain" source={item.src} style={{ width: 300, height: 200 }} />
-              <Text>{item.name}</Text>
-            </View>
-          </TouchableOpacity>
-        ))}
+        <ScrollView>
+
+          {images.map((item, index) => (
+            <TouchableOpacity>
+              <View key={index}>
+                <Image resizeMode="contain" source={item.src} style={{ width: 300, height: 200 }} />
+                <Text>{item.name}</Text>
+              </View>
+            </TouchableOpacity>
+          ))}
+
+        </ScrollView>
       </View>
     </>
   );
