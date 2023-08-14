@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Lab21, Lab22, Lab31, Lab32, Nine } from './lab_components/index';
 
+
 const Stack = createNativeStackNavigator();
 
 const HomeScreen = ({ navigation }) => {
@@ -26,11 +27,10 @@ const HomeScreen = ({ navigation }) => {
         title="Lab3_2"
         onPress={() => navigation.navigate('Lab32')}
       />
-       <Button
+      <Button
         title="Nine"
         onPress={() => navigation.navigate('Nine')}
       />
-
 
     </View>
   );

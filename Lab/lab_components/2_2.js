@@ -12,12 +12,12 @@ const images = [
 
 export default function App() {
   return (
-    <>
+    <View style={styles.bodys}>
       <View style={styles.header}>
         <Image resizeMode="contain" style={styles.img} source={IT_Logo} />
         <Text style={{ fontSize: 40 }}>Programs</Text>
       </View>
-      <View style={styles.container}>
+      <View >
         <ScrollView>
 
           {images.map((item, index) => (
@@ -31,7 +31,7 @@ export default function App() {
 
         </ScrollView>
       </View>
-    </>
+    </View>
   );
 }
 
@@ -43,15 +43,21 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     backgroundColor: "blue",
     height: 100,
+    width: '100%',
   },
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+
   },
   img: {
     height: 70,
     width: 70,
   },
+  bodys: {
+    flexDirection: "column",
+    width: '100%',
+    alignItems: "center",
+    justifyContent: "center",
+  }
 });
