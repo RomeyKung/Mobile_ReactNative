@@ -4,9 +4,9 @@ import { MEALS } from "../data/dummy-data";
 import MealList from "../components/MealList";
 import { useSelector } from 'react-redux'
 
-const FavMeal = useSelector((state) => state.meal.favoriteMeals);
 
 const FavoritesScreen = (props) => {
+   const FavMeal = useSelector((state) => state.meal.favoriteMeals);
   return (
     <View style={styles.screen}>
       <MealList listData={FavMeal} navigation={props.navigation} />
