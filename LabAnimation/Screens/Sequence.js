@@ -1,12 +1,13 @@
-import { StyleSheet, Text, View, Animated, Button } from "react-native";
+import { StyleSheet, Text, View, Animated, Button, Easing } from "react-native";
 import React, { useRef } from "react";
 
 const SequenceScreen = () => {
   const refOpacity = useRef(new Animated.Value(1)).current;
   const refRotate = useRef(new Animated.Value(0)).current;
+
   const rotate = refRotate.interpolate({
-    inputRange: [0, 1],
-    outputRange: ["0deg", "360deg"],
+    inputRange: [0, 0.25, 1],
+    outputRange: ["0deg", "360deg", "0deg"],
   });
   const animate = () => {
     Animated.sequence([
@@ -17,12 +18,13 @@ const SequenceScreen = () => {
       }),
       Animated.timing(refOpacity, {
         toValue: 1,
-        duration: 500,
+        duration: 2000,
         useNativeDriver: true,
       }),
+
       Animated.timing(refRotate, {
         toValue: 1,
-        duration: 1000,
+        duration: 5000,
         useNativeDriver: true,
       }),
     ]).start(() => {
